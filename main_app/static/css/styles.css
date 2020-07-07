@@ -141,6 +141,7 @@ body {
     width: 100vw;
     background-color: black;
     color: white;
+    border-radius: 0px;
 }
 
 ::placeholder {
