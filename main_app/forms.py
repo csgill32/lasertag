@@ -7,7 +7,7 @@ class Subscriber_Form(ModelForm):
         model = Subscriber
         fields = ['first_name','last_name','email']
         widgets = {
-            'first_name': forms.TextInput(attrs = {'placeholder': 'First Name'}),
-            'last_name': forms.TextInput(attrs = {'placeholder': 'Last Name'}),
-            'email': forms.TextInput(attrs= {'placeholder': 'Email Address'})
+            'first_name': forms.TextInput(attrs = {'placeholder': 'FIRST NAME'}),
+            'last_name': forms.TextInput(attrs = {'placeholder': 'LAST NAME'}),
+            'email': forms.TextInput(attrs= {'placeholder': 'EMAIL ADDRESS'})
         }
