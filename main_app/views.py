@@ -14,16 +14,20 @@ def adminpage(request):
 
 # index & create
 def subscribe(request):
+    error_message = ''
     if request.method == 'POST':
         subscriber_form = Subscriber_Form(request.POST)
         if subscriber_form.is_valid():
             new_subscriber = subscriber_form.save(commit=False)
             new_subscriber.save()
-            return redirect('home', { subscribed: True })
+            subscriber_form = Subscriber_Form()
+            return render(request, 'home.html', { 'subscribed': True, 'subscriber_form': subscriber_form })
+        else:
+            error_message = 'Error - All fields must be completed. Valid e-mail address required.'
     else:
         subscriber_form = Subscriber_Form()
     subscribers = Subscriber.objects.all()
-    context = {'subscribers':subscribers, 'subscriber_form':subscriber_form}
+    context = {'subscribers':subscribers, 'subscriber_form':subscriber_form, 'error_message':error_message}
     return render(request, 'home.html', context)
     
 # show 
