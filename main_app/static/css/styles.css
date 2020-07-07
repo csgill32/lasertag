@@ -6,15 +6,15 @@ th, td {
     border-bottom: 1px solid #ddd;
     padding: 15px;
 } */
-* {
-    box-sizing: border-box;
-    margin: 0 auto;
-}
+
+
+
 
 .home__section {
-    max-width: 325px;
+    max-width: 360px;
     display: flex;
     justify-content: center;
+    margin: 0 20px;
 }
 
 .header {
@@ -25,7 +25,6 @@ th, td {
 
 .subheader {
     margin: 30px 15px;
-
     text-align: center;
 }
 
