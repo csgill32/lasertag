@@ -10,6 +10,8 @@
             <p class='subtext'>We promise we won't blast your inbox... unless you want us to </p>
             <a data-toggle="modal" data-target="#learn__more__modal">LEARN MORE</a>
         </header>
+
+        <!-- Newsletter Form -->
         <section class='row newsletter__form'>
             <form action="{% url 'home' %}" method='POST'>
                 {% csrf_token %}
