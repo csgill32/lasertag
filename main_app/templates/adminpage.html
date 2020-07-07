@@ -2,26 +2,29 @@
 
 {% block content %}
 
-<h1>Admin Page</h1>
+<div class="card">
+    <h1>{{subscribers.count}}</h1>
 
-<table>
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-    </tr>
 
-    {% for subscriber in subscribers %}
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
 
-    <tr>
-        <td>{{subscriber.first_name}}</td>
-        <td>{{subscriber.last_name}}</td>
-        <td>{{subscriber.email}}</td>
-    </tr>
+        {% for subscriber in subscribers %}
 
-    {% endfor%}
-</table>
+        <tr>
+            <td>{{subscriber.first_name | capfirst }}</td>
+            <td>{{subscriber.last_name | capfirst }}</td>
+            <td>{{subscriber.email}}</td>
+        </tr>
 
+        {% endfor%}
+    </table>
+
+</div>
 
 
 {% endblock %}
