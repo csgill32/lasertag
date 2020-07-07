@@ -2,32 +2,52 @@
 
 {% block content %}
 
+<div class="row home__section">
+    <div class="col">
+        <header class='row header'>
+            <h5 class='subheader'>Can we shoot you a message from time to time?</h5>
+            <p class='subtext'>Stay in the know with our newsletter containing all the latest and greatest updates from LaserLand</p>
+            <p class='subtext'>We promise we won't blast your inbox... unless you want us to </p>
+            <a data-toggle="modal" data-target="#learn__more__modal">LEARN MORE</a>
+        </header>
+        <section class='row newsletter__form'>
+            <form action="{% url 'home' %}" method='POST'>
+                {% csrf_token %}
+                <div class="row input__window">
+                    {{subscriber_form.first_name}}
+                </div>
+                <div class="row input__window">
+                    {{subscriber_form.last_name}}
+                </div>
+                <div class="row input__window">
+                    {{subscriber_form.email}}
+                </div>
+                <footer class='row footer'>
+                    <p class='footer__text'>Your privacy is as important to us as it is you. <br /> We wont send you anything outside of the frequency you've selected.</p>
+                    <input type="submit" class='btn sign__up' data-toggle="modal" value='YES! Sign Me Up.'>
+                </footer>
+            </form>
+        </section>
+    </div>
+</div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="learn__more__modal" >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content policy__content">
+            <div class="modal-body policy__body">
+                <div class="col policy__close">
+                    <a data-dismiss="modal">CLOSE X</a>
+                </div>
+                <h6>PRIVACY POLICY/TERMS & CONDITIONS</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repudiandae ea, neque totam saepe architecto tenetur adipisci maxime, numquam culpa commodi voluptates minima, laudantium consequatur quo quisquam! Excepturi, fuga in. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores laboriosam voluptatibus quos voluptate repellat blanditiis quidem quisquam culpa quas aperiam! Possimus expedita officia perferendis, quos labore deleniti dolore aspernatur reiciendis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum aspernatur perspiciatis ut culpa quasi eligendi fugiat maxime, esse nemo eveniet delectus maiores repellat, officia quas voluptates minus deserunt unde quibusdam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repudiandae ea, neque totam saepe architecto tenetur adipisci maxime, numquam culpa commodi voluptates minima, laudantium consequatur quo quisquam! Excepturi, fuga in. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores laboriosam voluptatibus quos voluptate repellat blanditiis quidem quisquam culpa quas aperiam! Possimus expedita officia perferendis, quos labore deleniti dolore aspernatur reiciendis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum aspernatur perspiciatis ut culpa quasi eligendi fugiat maxime, esse nemo eveniet delectus maiores repellat, officia quas voluptates minus deserunt unde quibusdam.</p>
+            </div>
+          </div>
+        </div>
+    </div> 
 
 
-<header class='row header'>
-    <h5 class='subheader'>Can we shoot you a message from time to time?</h5>
-    <p class='subtext'>Stay in the know with our newsletter containing all the latest and greatest updates from LaserLand</p>
-    <p class='subtext'>We promise we won't blast your inbox... unless you want us to </p>
-    <p><a href="#"> LEARN MORE </a></p>
-</header>
-<section class='row newsletter__form'>
-    <form action="{% url 'home' %}" method='POST'>
-        {% csrf_token %}
-        <div class="row input__window">
-            {{subscriber_form.first_name}}
-        </div>
-        <div class="row input__window">
-            {{subscriber_form.last_name}}
-        </div>
-        <div class="row input__window">
-            {{subscriber_form.email}}
-        </div>
-        <footer class='row footer'>
-            <p class='footer__text'>Your privacy is as important to us as it is you. <br /> We wont send you anything outside of the frequency you've selected.</p>
-            <input type="submit" class='btn sign__up' value='YES! Sign Me Up.'>
-        </footer>
-    </form>
-</section>
 
 
 {% endblock %}
