@@ -19,7 +19,8 @@ def subscribe(request):
         if subscriber_form.is_valid():
             new_subscriber = subscriber_form.save(commit=False)
             new_subscriber.save()
-            return redirect('home', { subscribed: True })
+            subscriber_form = Subscriber_Form()
+            return render(request, 'home.html', { 'subscribed': True, 'subscriber_form': subscriber_form })
     else:
         subscriber_form = Subscriber_Form()
     subscribers = Subscriber.objects.all()
