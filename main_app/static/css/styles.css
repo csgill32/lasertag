@@ -1,5 +1,10 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 table {
     border-collapse: collapse;
+    margin-top: 15px;
 }
 
 th, td {
@@ -7,14 +12,32 @@ th, td {
     padding: 15px;
 }
 
-main{
-    height: 92vh;
+th {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+td.email {
+    font-size: 10px;
+    border-left: 1px solid #ddd;
+}
+
+header.admin-header {
+    background-image: url('../images/laser.png');
+    background-size: cover;
+    height: 140px;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
 }
 
 .total-signups {
 width: fit-content;
-padding: 5px;
-margin: 10px;
+padding-top: 20px;
+padding-left: 15px;
+padding-right: 15px;
+padding-bottom: 0px;
+margin-top: 20px;
 background: #FFFFFF;
 border: 1px solid #000000;
 box-sizing: border-box;
@@ -29,10 +52,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .tally {
     color: #580B5D;
     font-size: 60px;
+    font-weight: bolder;
 }
-
-
-
 
 .home__section {
     max-width: 360px;
