@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Subscriber
 from .forms import Subscriber_Form
 from django.http import HttpResponse
+from django.db.models.functions import Lower
 
 # Create your views here.
 
@@ -18,7 +19,7 @@ def subscribe(request):
         if subscriber_form.is_valid():
             new_subscriber = subscriber_form.save(commit=False)
             new_subscriber.save()
-            return redirect('home')
+            return redirect('home', { subscribed: True })
     else:
         subscriber_form = Subscriber_Form()
     subscribers = Subscriber.objects.all()
@@ -28,6 +29,6 @@ def subscribe(request):
 # show 
 
 def show_subscribers(request):
-    subscribers = Subscriber.objects.all()
+    subscribers = Subscriber.objects.all().order_by(Lower('last_name'))
     context = {'subscribers':subscribers}
     return render(request, 'adminpage.html', context)
