@@ -1,6 +1,18 @@
 body {
     height: 825px;
 }
+
+main.homepage {
+    background-image: url('../images/laser-op.png');
+    background-size: cover;
+}
+
+/* div.transbox {
+    background-color: ffffff;
+    opacity: 0.2;
+    z-index: -1;
+} */
+
 table {
     border-collapse: collapse;
     margin-top: 15px;
@@ -144,4 +156,11 @@ body {
 .policy__body, .policy__content {
     font-size: 12px;
     max-width: 300px;
+}
+
+p.error {
+    color: red;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
