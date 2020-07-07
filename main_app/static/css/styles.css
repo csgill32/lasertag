@@ -146,6 +146,7 @@ body {
 
 ::placeholder {
     color: black;
+    font-size: 12px;
 }
 
 .policy__close {
@@ -164,4 +165,15 @@ p.error {
     font-size: 10px;
     margin-top: 5px;
     margin-bottom: 0px;
+}
+
+.subscribed__close {
+   float: right;
+}
+
+.subscribed__content {
+    padding: auto;
+    margin-top: 40px;
+    margin-left: 80px;
+    margin-bottom: 20px;
 }
