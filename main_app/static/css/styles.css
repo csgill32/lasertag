@@ -1,4 +1,6 @@
-
+body {
+    height: 825px;
+}
 table {
     border-collapse: collapse;
     margin-top: 15px;
@@ -88,6 +90,7 @@ body {
 }
 
 .newsletter__form {
+    max-width: 411px;
     display: flex;
     justify-content: center;
 }
@@ -104,7 +107,7 @@ body {
 
 
 .footer {
-    max-width: 325px;
+    max-width: 411px;
     display: flex;
     justify-content: center;
 }
@@ -114,11 +117,16 @@ body {
     font-size: 12px;
     font-style: italic;
     margin: 0 15px;
-}
+}  
 
 .sign__up {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
     margin: auto;
-    width: 325px;
+    width: 100vw;
     background-color: black;
     color: white;
 }
