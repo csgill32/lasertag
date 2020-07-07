@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Home Page</h1>
+<div>
+    <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        {{subscriber_form.as_p}}
+        <input type="submit" value="Subscribe">
+    </form>
+</div>
+
+{% endblock %}
