@@ -2,26 +2,33 @@
 
 {% block content %}
 
-<h1>Admin Page</h1>
+<main>
+    <div class="container d-flex justify-content-center align-items-center w-50 h-100">
+        <div class="align-self-center">
+            <div class="total-signups mx-auto text-center">
+                <h6>TOTAL SIGNUPS</h6>
+                <h1 class="tally">{{subscribers.count}}</h1>
+            </div>
 
-<table>
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-    </tr>
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
 
-    {% for subscriber in subscribers %}
+                {% for subscriber in subscribers %}
 
-    <tr>
-        <td>{{subscriber.first_name}}</td>
-        <td>{{subscriber.last_name}}</td>
-        <td>{{subscriber.email}}</td>
-    </tr>
+                <tr>
+                    <td>{{subscriber.first_name | capfirst }}</td>
+                    <td>{{subscriber.last_name | capfirst }}</td>
+                    <td>{{subscriber.email}}</td>
+                </tr>
 
-    {% endfor%}
-</table>
-
-
+                {% endfor%}
+            </table>
+        </div>
+    </div>
+</main>
 
 {% endblock %}
