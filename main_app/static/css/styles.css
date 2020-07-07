@@ -7,12 +7,6 @@ main.homepage {
     background-size: cover;
 }
 
-/* div.transbox {
-    background-color: ffffff;
-    opacity: 0.2;
-    z-index: -1;
-} */
-
 table {
     border-collapse: collapse;
     margin-top: 15px;
@@ -96,9 +90,9 @@ body {
 }
 
 .subtext {
-    margin: 0 40px 20px;
+    margin: 0 40px;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .newsletter__form {
@@ -160,7 +154,11 @@ body {
 
 p.error {
     color: red;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 5px;
     margin-bottom: 0px;
+}
+
+a {
+    font-size: 12px;
 }
