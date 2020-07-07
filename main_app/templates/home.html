@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load static %}
 <div class="row home__section">
     <div class="col">
         <header class='row header'>
@@ -49,7 +49,22 @@
         </div>
     </div> 
 
+    <div class="modal fade" id="subscribed__modal__show" >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content subscribed__content">
+            <div class="modal-body subscribed__body">
+                <div class="col subscribed__close">
+                    <a data-dismiss="modal">CLOSE X</a>
+                </div>
+                <h6>Your're In!</h6>
+                
+            </div>
+        </div>
+    </div> 
 
+    {% if subscribed %}
+    <script src= "{% static '/scripts/main.js' %}" defer></script>
+    {% endif %}
 
 
 {% endblock %}
